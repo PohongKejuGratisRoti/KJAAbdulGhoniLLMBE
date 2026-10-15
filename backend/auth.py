@@ -1,10 +1,11 @@
 from datetime import datetime, timedelta, timezone
-import os 
+import os
+from pathlib import Path
 import jwt
 
 from dotenv import load_dotenv
 
-load_dotenv() #load the environment var
+load_dotenv(Path(__file__).resolve().parent / ".env")
 
 secretkey = os.getenv("SECRET_KEY")
 
@@ -27,6 +28,6 @@ def conJWT(token) -> tuple[bool, dict | None]:
 
     except jwt.InvalidTokenError:
         print("Invalid token")
-        return False, payload
+        return False, None
 
 
