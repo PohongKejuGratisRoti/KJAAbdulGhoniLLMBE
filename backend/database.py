@@ -1,7 +1,8 @@
+from pathlib import Path
 import sqlite3
 import bcrypt
 
-DB_NAME = "notsolusindo.db"
+DB_NAME = Path(__file__).resolve().parent / "notsolusindo.db"
 
 
 def init_db():

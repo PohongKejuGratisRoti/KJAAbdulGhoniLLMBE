@@ -17,7 +17,7 @@ server.add_middleware(
 server.include_router(userrouter)
 server.include_router(modelrouter)
 
-DIST = Path(__file__).resolve().parent / 'frontend' / 'dist'
+DIST = Path(__file__).resolve().parent.parent / 'frontend' / 'dist'
 if (DIST / 'assets').is_dir():
     server.mount('/assets', StaticFiles(directory=DIST / 'assets'), name='assets')
 
