@@ -64,4 +64,4 @@ if __name__ == "__main__":
         print("Test user already exists.")
 
     print("User:", read_user("testuser"))
-    print("Password valid:", verify_user("testuser", "test123"))
+    print("Password valid:", verify_user("testuser", "tes"))
