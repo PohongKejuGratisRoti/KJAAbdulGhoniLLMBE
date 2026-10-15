@@ -27,6 +27,6 @@ def conJWT(token) -> tuple[bool, dict | None]:
 
     except jwt.InvalidTokenError:
         print("Invalid token")
-        return False, payload
+        return False, None
 
 
